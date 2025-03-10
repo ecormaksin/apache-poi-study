@@ -18,11 +18,15 @@ repositories {
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
+    testImplementation libs.junit.jupiter.params
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // This dependency is used by the application.
     implementation libs.guava
+    implementation libs.apache.poi
+    implementation libs.apache.poi.ooxml
+    implementation libs.apache.poi.scratchpad
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
