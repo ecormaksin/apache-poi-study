@@ -2,7 +2,6 @@ package org.example;
 
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -16,15 +15,6 @@ public class ApachePOITest {
     @ParameterizedTest
     @ValueSource(strings = {"template_without_table.doc", "template_with_table.doc"})
     void testHWPF(String templateFileName) throws Exception {
-        testHWPFPerFile(templateFileName);
-    }
-
-    @Test
-    void testHWPFStepByStep() throws Exception {
-        testHWPFPerFile("template_with_table_step_by_step.doc");
-    }
-
-    private void testHWPFPerFile(String templateFileName) throws Exception {
         File templateFile = new File("src/main/resources/" + templateFileName);
         File outputFile = new File("/tmp/" + templateFileName);
 

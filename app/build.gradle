@@ -27,6 +27,9 @@ dependencies {
     implementation libs.apache.poi
     implementation libs.apache.poi.ooxml
     implementation libs.apache.poi.scratchpad
+    implementation libs.slf4j.api
+    implementation libs.slf4j.nop
+    implementation libs.log4j.to.slf4j
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
